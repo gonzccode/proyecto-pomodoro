@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.jsdelivr.net/npm/luxon@2.3.0/build/global/luxon.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <script defer src="inicio.js" ></script>
+    <title>Time to Time</title>
+</head>
+<body>
+    <div id="task">
+        <h1>
+            <strong> Time to Time </strong>
+        </h1>
+        <div id="date">
+
+        </div>
+        <div id="content-task">
+            <div id="helloUser"></div>
+            <div class="row">
+                <div class="col-md-5">
+                    <div id="addTask">
+                        <div id="divTask" class="input-group">
+                            <!-- <span class="input-group-text">Escribe tu tarea</span> -->
+                            <input type="text" aria-label="task" class="form-control" id="inputTask" placeholder="Escribe tu tarea">
+                        </div>
+                        <div>
+                            <button type="button" class="btn btn-warning" id="btnTask">Agregar</button>
+                        </div>
+                    </div>
+                    <div id="viewTask">
+                        <h5>
+                            <strong>Estas son tus tareas: </strong>
+                        </h5>
+                        <ul id="listTask">
+                            
+                        </ul>
+                    </div>
+                </div>
+                <div id="separation" class="col-md-2">
+
+                </div>
+                <div class="col-md-5">
+                    <div class="container timer">
+                        <div class="row">
+                          <div class="col-3">
+                            <h3 id="minutes">25</h3>
+                          </div>
+                          <div class="col-1">
+                            <h3>:</h3>
+                          </div>
+                          <div class="col-3">
+                            <h3 id="seconds">00</h3>
+                          </div>
+                        </div>
+                    </div>
+                </div>  
+            </div>
+        </div>
+        <div>
+            <div id="phrase">
+    
+            </div>
+        </div>
+        
+    </div>
+</body>
+
+</html>

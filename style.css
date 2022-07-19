@@ -1,0 +1,124 @@
+body {
+    font-family: Helvetica, sans-serif;
+    background-color: #0093E9;
+    /* background-image: linear-gradient(180deg, #0093E9 0%, #80D0C7 100%); */
+    height: 100%;
+}
+
+/*ARCHIVO INDEX.HTML*/
+#user{
+    text-align: center;
+    color: #ffff;
+    position: relative;
+}
+
+#contentUser{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 100%);
+    
+}
+
+#nameUser{
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+#btnUser{
+    margin: 10px;
+}
+
+
+/*ARCHIVO INICIO.HTML*/
+#task{
+    padding: 50px;
+    text-align: center;
+    margin: 0 auto;
+    color: #ffff;
+}
+
+#date{
+    margin-bottom: 10px;
+}
+
+#helloUser {
+    margin-bottom: 20px;
+}
+
+#content-task{
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+#addTask{
+    width: 80%;
+    margin: 0 auto;
+}
+
+#divTask{
+    margin: 10px;
+}
+
+#btnTask{
+    margin: 10px;
+}
+
+#viewTask{
+    width: 70%;
+    margin: 0 auto;
+    
+}
+
+#listTask {
+    margin: 10px;
+    
+}
+
+#separation {
+    border-left: 2px solid #ffff;
+    height: 60%;
+    left: 50%;
+    position: absolute;
+}
+
+hr {
+    height:100vh;
+ width:.5vw;
+ border-width:0;
+ color:#000;
+ background-color:#000;
+}
+
+ul{
+    list-style: none;
+}
+
+li {
+    background-color: #efebf4;
+    border: solid 1px silver;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+    color: black;
+}
+
+.black-text p{
+    color: black;
+}
+
+.green-text p{
+    text-decoration:line-through;
+    color: green !important;
+}
+
+/* #phrase {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+} */
+
+#phrase p {
+    font-size: 18px;
+}

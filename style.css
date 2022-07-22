@@ -46,6 +46,22 @@ body {
     margin-bottom: 20px;
 }
 
+.sectionTask {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    margin: 10px;
+    padding: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.sectionTime {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    margin: 10px;
+    height: 200px;
+}
+
 #content-task{
     margin-top: 10px;
     margin-bottom: 20px;
@@ -54,6 +70,24 @@ body {
 #addTask{
     width: 80%;
     margin: 0 auto;
+    
+}
+
+.timer{
+    
+    width: 80%;
+    font-size: 80px;
+    font-weight: bold;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+#btnTime {
+    margin-top: -20px;
+    margin-bottom: 20px;
 }
 
 #divTask{
@@ -65,8 +99,9 @@ body {
 }
 
 #viewTask{
-    width: 70%;
+    width: 90%;
     margin: 0 auto;
+    
     
 }
 
@@ -80,6 +115,10 @@ body {
     height: 60%;
     left: 50%;
     position: absolute;
+}
+
+#success{
+    font-weight: bold;
 }
 
 hr {

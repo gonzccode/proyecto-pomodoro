@@ -63,7 +63,7 @@ function addTask() {
             newTask = new Task(numberTask, nameUser, task, 1);
             arrayTask.push(newTask);
             task = "";
-            localStorage.setItem("tasks",JSON.stringify(arrayTask));
+            localStorage.setItem("tasks-"+nameUser,JSON.stringify(arrayTask));
             listTask();
         }
 
@@ -71,7 +71,7 @@ function addTask() {
         newTask = new Task(numberTask, nameUser, task, 1);
         arrayTask.push(newTask);
         task = "";
-        localStorage.setItem("tasks",JSON.stringify(arrayTask));
+        localStorage.setItem("tasks-"+nameUser,JSON.stringify(arrayTask));
         listTask();
     }
 }
@@ -79,8 +79,10 @@ function addTask() {
 //funcion que lista en el HTML recorriendo ARRAYTASK
 const listTask = () => {
     listT.innerHTML = "";
-    if(localStorage.getItem("tasks")){
-        arrayTask = JSON.parse(localStorage.getItem("tasks"));
+    if(localStorage.getItem("tasks-"+nameUser)){
+        arrayTask = JSON.parse(localStorage.getItem("tasks-"+nameUser));
+        arrayTask = arrayTask.filter( t => t.user == nameUser)
+        console.table(arrayTask)
     }
 
     for (element of arrayTask) {
@@ -138,13 +140,13 @@ function doneTask(id) {
         //Operador ternario para dar valor al estado de la tarea
         v.state = v.id == id ?  0 : v.state;
     }
-    localStorage.setItem("tasks",JSON.stringify(arrayTask));
+    localStorage.setItem("tasks-"+nameUser,JSON.stringify(arrayTask));
 }
 
 //funcion para eliminar la tarea escogida
 function deleteTask(id) {
     arrayTask = arrayTask.filter((item) => item.id !== id);
-    localStorage.setItem("tasks",JSON.stringify(arrayTask));
+    localStorage.setItem("tasks-"+nameUser,JSON.stringify(arrayTask));
     listTask();
 }
 
@@ -182,7 +184,8 @@ const getPhrases = () => {
 
 }
 
-//este evento se activa cuando la pagina esté cargada, setTimeout para mostrar la primera frase y setInterval es para que se carga una frase cada cierto tiempo
+//este evento se activa cuando la pagina esté cargada, setTimeout para mostrar la primera frase 
+//setInterval es para que se carga una frase cada cierto tiempo
 document.addEventListener("DOMContentLoaded", () => {
     setTimeout(() => {
         getPhrases();

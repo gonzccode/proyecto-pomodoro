@@ -161,7 +161,6 @@ const dateFunction = () => {
 
 dateFunction()
 
-
 //llamando al archivo json para mostrar las frases
 const getPhrases = () => {
     fetch('frases.json')
@@ -175,13 +174,10 @@ const getPhrases = () => {
             const {phrase, author} = arrayPhrases[numberRandom];
             textPhrase.innerHTML = `<strong>${phrase}</strong> - ${author}`;
             divPhrase.append(textPhrase);
-
-
         })
     .catch((error) => {
         console.error("Se produjo un error: ",error);
     })
-
 }
 
 //este evento se activa cuando la pagina esté cargada, setTimeout para mostrar la primera frase 

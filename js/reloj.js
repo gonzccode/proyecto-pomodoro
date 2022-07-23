@@ -66,7 +66,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
             minutes.innerHTML = timeMinutes;
             seconds.innerHTML = timeSeconds;
-            
         }
 
         //funcion que reduce los minutos de reloj

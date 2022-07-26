@@ -82,7 +82,6 @@ const listTask = () => {
     if(localStorage.getItem("tasks-"+nameUser)){
         arrayTask = JSON.parse(localStorage.getItem("tasks-"+nameUser));
         arrayTask = arrayTask.filter( t => t.user == nameUser)
-        console.table(arrayTask)
     }
 
     for (element of arrayTask) {

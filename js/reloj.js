@@ -71,11 +71,13 @@ document.addEventListener("DOMContentLoaded", () => {
         //funcion que reduce los minutos de reloj
         function minutesTime(){
             timeMinutes = timeMinutes - 1;
+            
             if(timeMinutes >= 10){
                 minutes.innerHTML = timeMinutes;
             } else {
                 minutes.innerHTML = "0" + timeMinutes;
             }
+            
         }
 
         //funcion que reduce los segundos
@@ -88,8 +90,8 @@ document.addEventListener("DOMContentLoaded", () => {
                 seconds.innerHTML = "0" + timeSeconds;
             }
 
-            if(timeSeconds <= 0){
-                if(timeMinutes <= 0){
+            if(timeSeconds == 0){
+                if(timeMinutes == 0){
                     clearInterval(variationMinutes);
                     clearInterval(variationSeconds);
                     //este if sirve para que solo se active cuando sea el tiempo del brave sino se para el tiempo y comienza de nuevo
